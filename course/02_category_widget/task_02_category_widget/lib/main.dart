@@ -4,10 +4,6 @@
 
 // You can read about packages here: https://flutter.io/using-packages/
 import 'package:flutter/material.dart';
-
-// You can use a relative import, i.e. `import 'category.dart';` or
-// a package import, as shown below.
-// More details at http://dart-lang.github.io/linter/lints/avoid_relative_lib_imports.html
 import 'package:task_02_category_widget/category.dart';
 
 // TODO: Pass this information into your custom [Category] widget
@@ -32,7 +28,12 @@ class UnitConverterApp extends StatelessWidget {
         backgroundColor: Colors.green[100],
         body: Center(
           // TODO: Determine what properties you'll need to pass into the widget
-          child: Category(_categoryName, _categoryIcon, _categoryColor),
+//          child: Category( _categoryName, _categoryIcon, _categoryColor),
+          child: Category(
+            categoryName: _categoryName,
+            icon: _categoryIcon,
+            iconColor: _categoryColor,
+          ),
         ),
       ),
     );
