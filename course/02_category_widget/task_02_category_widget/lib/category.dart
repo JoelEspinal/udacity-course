@@ -6,6 +6,9 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 
+final _rowHeight = 100.0;
+final _boderRadius = BorderRadius.circular(_rowHeight);
+
 /// A custom [Category] widget.
 ///
 /// The widget is composed on an [Icon] and [Text]. Tapping on the widget shows
@@ -20,10 +23,9 @@ class Category extends StatelessWidget {
   IconData icon;
   Color iconColor;
 
-  Category(
-      {@required this.categoryName,
-      @required this.icon,
-      @required this.iconColor})
+  Category({@required this.categoryName,
+    @required this.icon,
+    @required this.iconColor})
       : assert(categoryName != null),
         assert(icon != null),
         assert(iconColor != null);
@@ -40,10 +42,10 @@ class Category extends StatelessWidget {
     // TODO: Build the custom widget here, referring to the Specs.
 
     return Container(
-        height: 100.0,
+        height: _rowHeight,
         padding: EdgeInsets.all(8.0),
         child: InkWell(
-          borderRadius: BorderRadius.circular(50.0),
+          borderRadius: _boderRadius,
           highlightColor: Colors.amber,
           splashColor: iconColor,
           onTap: () => print('I was tapped!'),
