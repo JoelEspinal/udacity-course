@@ -43,6 +43,8 @@ class Category extends StatelessWidget {
         height: 100.0,
         padding: EdgeInsets.all(8.0),
         child: InkWell(
+          highlightColor: iconColor,
+          splashColor: iconColor,
           onTap: () => print('I was tapped!'),
           child: Row(
             children: <Widget>[
