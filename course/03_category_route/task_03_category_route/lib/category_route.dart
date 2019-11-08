@@ -42,6 +42,13 @@ class CategoryRoute extends StatelessWidget {
     Colors.red,
   ];
 
+  Widget _buildCategoryWidgets(List<Widget> categories) {
+    return ListView.builder(
+      itemBuilder: (BuildContext context, int index) => categories[index],
+      itemCount: categories.length,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: Create a list of the eight Categories, using the names and colors
@@ -56,18 +63,8 @@ class CategoryRoute extends StatelessWidget {
     }
 
     // TODO: Create a list view of the Categories
-    final listView = Container(
-      color: _routeColor,
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Scrollbar(
-          child: ListView(
-            children: _categoryList,
-            scrollDirection: Axis.vertical,
-          ),
-        ),
-      ),
-    );
+    final listView =
+        Container(color: _routeColor, child: _buildCategoryWidgets(_categoryList));
 
     // TODO: Create an App Bar
     final appBar = AppBar(
