@@ -23,7 +23,10 @@ class Category extends StatelessWidget {
   Category(
       {@required this.categoryName,
       @required this.icon,
-      @required this.iconColor});
+      @required this.iconColor})
+      : assert(categoryName != null),
+        assert(icon != null),
+        assert(iconColor != null);
 
   /// Builds a custom widget that shows [Category] information.
   ///
