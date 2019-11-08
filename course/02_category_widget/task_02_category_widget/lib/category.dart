@@ -20,8 +20,10 @@ class Category extends StatelessWidget {
   IconData icon;
   Color iconColor;
 
-//  const Category();
-  Category({this.categoryName, this.icon, this.iconColor});
+  Category(
+      {@required this.categoryName,
+      @required this.icon,
+      @required this.iconColor});
 
   /// Builds a custom widget that shows [Category] information.
   ///
