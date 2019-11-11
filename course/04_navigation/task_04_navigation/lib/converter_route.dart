@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:task_04_navigation/unit.dart';
 
+final _backgroundColor = Colors.green[100];
+
 /// Converter screen where users can input amounts to convert.
 ///
 /// Currently, it just displays a list of mock units.
@@ -48,8 +50,24 @@ class ConverterRoute extends StatelessWidget {
       );
     }).toList();
 
-    return ListView(
+    final listView = ListView(
       children: unitWidgets,
+    );
+
+    final appBar = AppBar(
+        backgroundColor: this.color,
+        title: Text(
+          'Unit Converter',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 30.0,
+          ),
+        ));
+
+    return Scaffold(
+      backgroundColor: _backgroundColor,
+      appBar: appBar,
+      body: listView,
     );
   }
 }
