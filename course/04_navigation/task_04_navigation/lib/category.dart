@@ -50,7 +50,10 @@ class Category extends StatelessWidget {
         .push(MaterialPageRoute<void>(builder: (BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          title: Text(this.name),
+          title: Text(
+            this.name,
+            style: TextStyle(fontSize: 30, color: Colors.black),
+          ),
           centerTitle: true,
           backgroundColor: this.color,
         ),
