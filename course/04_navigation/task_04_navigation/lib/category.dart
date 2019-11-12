@@ -51,6 +51,7 @@ class Category extends StatelessWidget {
       return Scaffold(
         appBar: AppBar(
           title: Text(this.name),
+          backgroundColor: this.color,
         ),
         body: ConverterRoute(
           units: this.units,
@@ -64,7 +65,7 @@ class Category extends StatelessWidget {
   ///
   /// This information includes the icon, name, and color for the [Category].
   @override
-  // This `context` parameter describes the location of this widget in the
+  // This `context` parameter describes the location of this widget in the2
   // widget tree. It can be used for obtaining Theme data from the nearest
   // Theme ancestor in the tree. Below, we obtain the display1 text theme.
   // See https://docs.flutter.io/flutter/material/Theme-class.html
