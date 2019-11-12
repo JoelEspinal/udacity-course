@@ -52,6 +52,10 @@ class Category extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.name),
         ),
+        body: ConverterRoute(
+          units: this.units,
+          color: this.color,
+        ),
       );
     }));
   }
