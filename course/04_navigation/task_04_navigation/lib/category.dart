@@ -51,6 +51,7 @@ class Category extends StatelessWidget {
       return Scaffold(
         appBar: AppBar(
           title: Text(this.name),
+          centerTitle: true,
           backgroundColor: this.color,
         ),
         body: ConverterRoute(
