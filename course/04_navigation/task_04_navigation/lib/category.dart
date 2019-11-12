@@ -46,11 +46,21 @@ class Category extends StatelessWidget {
   /// Navigates to the [ConverterRoute].
   void _navigateToConverter(BuildContext context) {
     // TODO: Using the Navigator, navigate to the [ConverterRoute]
-    Navigator.push(context,
-        MaterialPageRoute<void>(builder: (BuildContext context) {
-      return ConverterRoute(
-        units: units,
-        color: color,
+    Navigator.of(context)
+        .push(MaterialPageRoute<void>(builder: (BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            this.name,
+            style: TextStyle(fontSize: 30, color: Colors.black),
+          ),
+          centerTitle: true,
+          backgroundColor: this.color,
+        ),
+        body: ConverterRoute(
+          units: this.units,
+          color: this.color,
+        ),
       );
     }));
   }
@@ -59,7 +69,7 @@ class Category extends StatelessWidget {
   ///
   /// This information includes the icon, name, and color for the [Category].
   @override
-  // This `context` parameter describes the location of this widget in the
+  // This `context` parameter describes the location of this widget in the2
   // widget tree. It can be used for obtaining Theme data from the nearest
   // Theme ancestor in the tree. Below, we obtain the display1 text theme.
   // See https://docs.flutter.io/flutter/material/Theme-class.html
