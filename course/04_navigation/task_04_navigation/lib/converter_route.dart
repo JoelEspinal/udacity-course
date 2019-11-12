@@ -54,20 +54,6 @@ class ConverterRoute extends StatelessWidget {
       children: unitWidgets,
     );
 
-    final appBar = AppBar(
-        backgroundColor: this.color,
-        title: Text(
-          'Unit Converter',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 30.0,
-          ),
-        ));
-
-    return Scaffold(
-      backgroundColor: _backgroundColor,
-      appBar: appBar,
-      body: listView,
-    );
+    return listView;
   }
 }
