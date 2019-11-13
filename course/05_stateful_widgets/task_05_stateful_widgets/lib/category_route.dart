@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
 import 'package:task_05_stateful_widgets/category.dart';
 import 'package:task_05_stateful_widgets/unit.dart';
 
@@ -16,12 +15,19 @@ final _backgroundColor = Colors.green[100];
 ///
 /// While it is named CategoryRoute, a more apt name would be CategoryScreen,
 /// because it is responsible for the UI at the route's destination.
+
+// TODO: Create State object for the CategoryRoute
+class CategoryRoute extends StatefulWidget {
+  CategoryRoute();
+
+  @override
+  State<StatefulWidget> createState() {
+    return _CategoryRoute();
+  }
+}
+
 // TODO: Make CategoryRoute a StatefulWidget
-class CategoryRoute extends StatelessWidget {
-  const CategoryRoute();
-
-  // TODO: Create State object for the CategoryRoute
-
+class _CategoryRoute extends State<CategoryRoute> {
   static const _categoryNames = <String>[
     'Length',
     'Area',
