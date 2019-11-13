@@ -21,9 +21,8 @@ class CategoryRoute extends StatefulWidget {
   CategoryRoute();
 
   @override
-  State<StatefulWidget> createState() {
-    return _CategoryRoute();
-  }
+  State<StatefulWidget> createState() => _CategoryRoute();
+
 }
 
 // TODO: Make CategoryRoute a StatefulWidget
