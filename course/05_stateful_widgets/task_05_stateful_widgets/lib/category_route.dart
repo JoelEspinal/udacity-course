@@ -22,7 +22,6 @@ class CategoryRoute extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _CategoryRoute();
-
 }
 
 // TODO: Make CategoryRoute a StatefulWidget
@@ -70,15 +69,16 @@ class _CategoryRoute extends State<CategoryRoute> {
     });
   }
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: Instead of re-creating a list of Categories in every build(),
-    // save this as a variable inside the State object and create
-    // the list at initialization (in initState()).
-    // This way, you also don't have to pass in the list of categories to
-    // _buildCategoryWidgets()
-    final categories = <Category>[];
+  final categories = <Category>[];
 
+  // TODO: Instead of re-creating a list of Categories in every build(),
+  // save this as a variable inside the State object and create
+  // the list at initialization (in initState()).
+  // This way, you also don't have to pass in the list of categories to
+  // _buildCategoryWidgets()
+  @override
+  void initState() {
+    super.initState();
     for (var i = 0; i < _categoryNames.length; i++) {
       categories.add(Category(
         name: _categoryNames[i],
@@ -87,7 +87,10 @@ class _CategoryRoute extends State<CategoryRoute> {
         units: _retrieveUnitList(_categoryNames[i]),
       ));
     }
+  }
 
+  @override
+  Widget build(BuildContext context) {
     final listView = Container(
       color: _backgroundColor,
       padding: EdgeInsets.symmetric(horizontal: 8.0),
