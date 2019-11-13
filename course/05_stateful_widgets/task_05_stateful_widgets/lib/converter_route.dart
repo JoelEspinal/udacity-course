@@ -25,11 +25,11 @@ class ConverterRoute extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _ConverterRoute(color: color, units: units);
+    return _ConverterRouteState(color: color, units: units);
   }
 }
 
-class _ConverterRoute extends State<ConverterRoute> {
+class _ConverterRouteState extends State<ConverterRoute> {
   /// Color for this [Category]
   final Color color;
 
@@ -37,7 +37,7 @@ class _ConverterRoute extends State<ConverterRoute> {
   final List<Unit> units;
 
   /// This [ConverterRoute] requires the color and units to not be null.
-  _ConverterRoute({
+  _ConverterRouteState({
     @required this.color,
     @required this.units,
   })  : assert(color != null),
