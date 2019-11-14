@@ -60,6 +60,19 @@ class _ConverterRouteState extends State<ConverterRoute> {
   Widget build(BuildContext context) {
     // TODO: Create the 'input' group of widgets. This is a Column that
     // includes the input value, and 'from' unit [Dropdown].
+    var input = Padding(
+      padding: _padding,
+      child: TextField(
+        style: Theme.of(context).textTheme.display1,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Input',
+          labelStyle: Theme.of(context).textTheme.display1,
+        ),
+        keyboardType: TextInputType.number,
+        textDirection: TextDirection.ltr,
+      ),
+    );
 
     // TODO: Create a compare arrows icon.
 
@@ -67,30 +80,32 @@ class _ConverterRouteState extends State<ConverterRoute> {
     // includes the output value, and 'to' unit [Dropdown].
 
     // TODO: Return the input, arrows, and output widgets, wrapped in a Column.
-
-    // TODO: Delete the below placeholder code.
-    final unitWidgets = widget.units.map((Unit unit) {
-      return Container(
-        color: widget.color,
-        margin: EdgeInsets.all(8.0),
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Text(
-              unit.name,
-              style: Theme.of(context).textTheme.headline,
-            ),
-            Text(
-              'Conversion: ${unit.conversion}',
-              style: Theme.of(context).textTheme.subhead,
-            ),
-          ],
-        ),
-      );
-    }).toList();
-
-    return ListView(
-      children: unitWidgets,
+    return Column(
+      children: <Widget>[input],
     );
+    // TODO: Delete the below placeholder code.
+//    final unitWidgets = widget.units.map((Unit unit) {
+//      return Container(
+//        color: widget.color,
+//        margin: EdgeInsets.all(8.0),
+//        padding: EdgeInsets.all(16.0),
+//        child: Column(
+//          children: <Widget>[
+//            Text(
+//              unit.name,
+//              style: Theme.of(context).textTheme.headline,
+//            ),
+//            Text(
+//              'Conversion: ${unit.conversion}',
+//              style: Theme.of(context).textTheme.subhead,
+//            ),
+//          ],
+//        ),
+//      );
+//    }).toList();
+//
+//    return ListView(
+//      children: unitWidgets,
+//    );
   }
 }
