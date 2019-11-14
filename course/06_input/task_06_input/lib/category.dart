@@ -86,7 +86,7 @@ class Category extends StatelessWidget {
         child: InkWell(
           borderRadius: _borderRadius,
           highlightColor: color['highlight'],
-          splashColor: color,
+          splashColor: color['splash'],
           // We can use either the () => function() or the () { function(); }
           // syntax.
           onTap: () => _navigateToConverter(context),
