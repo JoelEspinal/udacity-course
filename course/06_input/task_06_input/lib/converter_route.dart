@@ -60,6 +60,7 @@ class _ConverterRouteState extends State<ConverterRoute> {
   Widget build(BuildContext context) {
     // TODO: Create the 'input' group of widgets. This is a Column that
     // includes the input value, and 'from' unit [Dropdown].
+
     var input = Padding(
       padding: _padding,
       child: TextField(
@@ -74,16 +75,35 @@ class _ConverterRouteState extends State<ConverterRoute> {
       ),
     );
 
-    // TODO: Create a compare arrows icon.
+    var fromDropDownButton = Padding(
+      padding: EdgeInsets.all(16.0),
+      child: DropdownButton<String>(
+        icon: Icon(Icons.arrow_downward, size: 40.0,),
+        iconSize: 24,
+        elevation: 16,
+        style: Theme.of(context).textTheme.display1,
+        underline: Container(
+          height: 20.0,
+          width: 60.0,
+        ),
+      ),
+    );
+
+    var inputContainer = Container(
+      child: Column(
+        children: <Widget>[input, fromDropDownButton],
+      ),
+    );
+
+    // TODO: Create a compare arrows icon`.
 
     // TODO: Create the 'output' group of widgets. This is a Column that
     // includes the output value, and 'to' unit [Dropdown].
 
-    // TODO: Return the input, arrows, and output widgets, wrapped in a Column.
-    return Column(
-      children: <Widget>[input],
-    );
-    // TODO: Delete the below placeholder code.
+// TODO: Return the input, arrows, and output widgets, wrapped in a Column.
+    return inputContainer;
+
+// TODO: Delete the below placeholder code.
 //    final unitWidgets = widget.units.map((Unit unit) {
 //      return Container(
 //        color: widget.color,
